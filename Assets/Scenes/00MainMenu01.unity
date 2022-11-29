@@ -742,7 +742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 609e2e40b4d28684493098b6b8ecabf0, type: 3}
+  m_Texture: {fileID: 2800000, guid: d9f92c932126cbc4bbefe16946ee833b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -967,7 +967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2054039095
 RectTransform:
   m_ObjectHideFlags: 0
