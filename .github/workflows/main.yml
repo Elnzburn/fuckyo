@@ -1,11 +1,22 @@
-name: Game-ci Test Runner - Windows
-  uses: game-ci/unity-test-runner@v2
-  env:
-    UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-    UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-    UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-  with:
-    projectPath: path/to/your/project
-    githubToken: ${{ secrets.GITHUB_TOKEN }}
-    unityVersion: auto
-    testMode: All
+name: GameCI Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build my project ✨
+    runs-on: windows-2019
+    steps:
+
+      # Test
+      - name: Run tests
+        uses: game-ci/unity-test-runner@v2
+        env:
+            UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+            UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+            UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+        with:
+            projectPath: elnzburn/fuckyo
+            githubToken: ${{ secrets.GITHUB_TOKEN }}
+            unityVersion: auto
+            testmode: All
