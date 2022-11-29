@@ -1,9 +1,10 @@
-name: Unity - Test runner
-  uses: game-ci/unity-test-runner@v2.1.0
+- uses: game-ci/unity-test-runner@v2
   env:
-    UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+    UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+    UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+    UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
   with:
-    projectPath: elnzburn/fuckyo
+    projectPath: path/to/your/project
     githubToken: ${{ secrets.GITHUB_TOKEN }}
     unityVersion: auto
     testMode: All
