@@ -14,4 +14,10 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("exitting...");
     }
+
+    public void NextSceneMeme()
+    {
+        SceneManager.LoadScene("Scenes/00MainMenu01");
+        Debug.Log("Load Meme");
+    }
 }
