@@ -1,3 +1,4 @@
+using System;
 using SojaExiles;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,6 +34,19 @@ public class PlayerOther : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F5))
         {
             ResumeNow();
+        }
+    }
+
+    void respawn()
+    {
+        SceneManager.LoadScene("01MainScene");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Chicken")
+        {
+            respawn();
         }
     }
 }
