@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - _isPause
+  - DoorWing
   layers:
   - Default
   - TransparentFX
